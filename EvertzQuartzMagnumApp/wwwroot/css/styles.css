@@ -96,9 +96,57 @@ body {
         transform: scale(0.98); /* Slightly smaller when clicked */
     }
 
-
 .error-message {
     color: red;
     font-size: 0.9rem;
     margin-top: -0.5rem;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar.dark-mode {
+    background-color: #333333;
+    border-bottom: 1px solid #444444;
+}
+
+.navbar-brand.dark-mode,
+.nav-link.dark-mode {
+    color: #ffffff;
+}
+
+button#dark-mode-toggle.dark-mode {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+body.dark-mode .btn {
+    background-color: #555555; /* Dark button background */
+    color: #ffffff; /* White button text */
+    border: 1px solid #666666;
+}
+
+    body.dark-mode .btn:hover {
+        background-color: #666666; /* Slightly lighter background on hover */
+    }
+/* Dark Mode Styles for Login Box */
+body.dark-mode .login-container {
+    background-color: #333333; /* Dark background for the login box */
+    color: #ffffff; /* White text for labels and other content */
+    border: 1px solid #444444; /* Optional: A subtle border */
+}
+
+/* Dark Mode Styles for Input Fields */
+body.dark-mode .form-group input {
+    background-color: #444444; /* Dark background for input fields */
+    color: #ffffff; /* White text for input fields */
+    border: 1px solid #555555; /* Optional: Subtle border */
+}
+
+    body.dark-mode .form-group input::placeholder {
+        color: #aaaaaa; /* Light gray placeholder text */
+    }

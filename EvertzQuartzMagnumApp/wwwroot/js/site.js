@@ -1,20 +1,24 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+    const toggleCheckbox = document.getElementById("toggle_checkbox");
 
-    // Check for saved mode in localStorage
+    // Set the toggle state based on local storage
     const isDarkMode = localStorage.getItem("darkMode") === "true";
+    toggleCheckbox.checked = isDarkMode;
+    document.body.classList.toggle("dark-mode", isDarkMode);
 
-    if (isDarkMode) {
-        body.classList.add("dark-mode");
-        toggleButton.textContent = "Light Mode";
-    }
+    // Add event listener for toggle
+    toggleCheckbox.addEventListener("change", () => {
+        const isNowDark = toggleCheckbox.checked;
+        document.body.classList.toggle("dark-mode", isNowDark);
 
-    // Toggle Dark Mode
-    toggleButton.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        const isDark = body.classList.contains("dark-mode");
-        localStorage.setItem("darkMode", isDark);
-        toggleButton.textContent = isDark ? "Light Mode" : "Dark Mode";
+        // Save the state to local storage
+        localStorage.setItem("darkMode", isNowDark);
+
+        // Save to session via API
+        fetch('/Account/ToggleDarkMode', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ isDarkMode: isNowDark })
+        });
     });
 });

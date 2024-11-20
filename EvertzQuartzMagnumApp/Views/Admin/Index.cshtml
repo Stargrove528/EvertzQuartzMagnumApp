@@ -1,2 +1,21 @@
-﻿<h1>Administrative Settings</h1>
-<p>This page will contain tools for managing Magnum controllers and configuration files.</p>
+﻿@{
+    ViewData["Title"] = "Admin - Upload Excel";
+}
+
+<h2>Upload Configuration Spreadsheet</h2>
+
+<form asp-controller="Admin" asp-action="UploadExcel" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select Excel File</label>
+        <input type="file" id="file" name="file" class="form-control" accept=".xlsx" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Upload</button>
+</form>
+
+@if (TempData["Message"] != null)
+    {
+        <div class="alert alert-info mt-3">
+            @TempData["Message"]
+        </div>
+    }
+}

@@ -1,2 +1,88 @@
-﻿<h1>Switching Interface</h1>
-<p>This page will be the interface for switching sources and destinations.</p>
+﻿@{
+    ViewData["Title"] = "Switching Interface";
+
+    // Ensure ConfigData is parsed correctly and is not null
+    var configData = ViewBag.ConfigData as IEnumerable<System.Text.Json.JsonElement>;
+}
+
+<div class="container">
+    <h2>Switching Interface</h2>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+    }
+    else if (configData == null || !configData.Any())
+    {
+        <div class="alert alert-warning">No configuration data available. Please upload a valid configuration file.</div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Current Source</th>
+                        <th>Select Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var entry in configData)
+                    {
+                        if (entry.ValueKind == System.Text.Json.JsonValueKind.Object &&
+                        entry.TryGetProperty("MnemonicFriendlyName", out var mnemonicFriendlyName) &&
+                        mnemonicFriendlyName.ValueKind == System.Text.Json.JsonValueKind.String &&
+                        entry.TryGetProperty("QuartzDst", out var quartzDst) &&
+                        quartzDst.ValueKind == System.Text.Json.JsonValueKind.String)
+                        {
+                            string currentSrc = "None";
+                            if (entry.TryGetProperty("QuartzSrc", out var quartzSrc) &&
+                            quartzSrc.ValueKind == System.Text.Json.JsonValueKind.String &&
+                            !(mnemonicFriendlyName.GetString()?.Contains("USB") ?? false) &&
+                            !(mnemonicFriendlyName.GetString()?.Contains("USBH") ?? false) &&
+                            !(mnemonicFriendlyName.GetString()?.Contains("DATA") ?? false))
+                            {
+                                currentSrc = quartzSrc.GetString() ?? "None";
+                            }
+
+                            <tr>
+                                <td>@mnemonicFriendlyName.GetString()</td>
+                                <td>@currentSrc</td>
+                                <td class="d-flex align-items-center">
+                                    <div class="dropdown-container">
+                                        <select class="form-control source-select dropdown" data-destination="@quartzDst.GetString()">
+                                            @foreach (var src in configData)
+                                            {
+                                                if (src.ValueKind == System.Text.Json.JsonValueKind.Object &&
+                                                src.TryGetProperty("MnemonicFriendlyName", out var srcName) &&
+                                                srcName.ValueKind == System.Text.Json.JsonValueKind.String &&
+                                                src.TryGetProperty("QuartzSrc", out var srcValue) &&
+                                                srcValue.ValueKind == System.Text.Json.JsonValueKind.String)
+                                                {
+                                                    var srcMnemonic = srcName.GetString();
+                                                    var dstMnemonic = mnemonicFriendlyName.GetString();
+
+                                                    if ((dstMnemonic?.Contains("VID-") == true && srcMnemonic?.Contains("VID-") == true) ||
+                                                    (dstMnemonic?.Contains("AUD-") == true && srcMnemonic?.Contains("AUD-") == true) ||
+                                                    (dstMnemonic?.Contains("DATA-") == true && srcMnemonic?.Contains("DATA-") == true) ||
+                                                    (dstMnemonic?.Contains("USB-") == true && srcMnemonic?.Contains("USB-") == true) ||
+                                                    (dstMnemonic?.Contains("USBH-") == true && srcMnemonic?.Contains("USBH-") == true))
+                                                    {
+                                                        <option value="@srcValue.GetString()">@srcMnemonic</option>
+                                                    }
+                                                }
+                                            }
+                                        </select>
+                                        <span class="caret">▼</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-take ms-2">Take</button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

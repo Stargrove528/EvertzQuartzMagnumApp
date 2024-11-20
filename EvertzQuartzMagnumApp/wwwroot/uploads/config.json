@@ -1,0 +1,752 @@
+[
+  {
+    "MnemonicFriendlyName": "Camera-VID-DST-1",
+    "MnemonicGlobal": "Camera-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "138"
+  },
+  {
+    "MnemonicFriendlyName": "Camera-VID-DST-2",
+    "MnemonicGlobal": "Camera-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "142"
+  },
+  {
+    "MnemonicFriendlyName": "Camera-VID-SRC-1",
+    "MnemonicGlobal": "Camera-VID-SRC-1",
+    "QuartzSrc": "166",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Camera-AUD-DST-1",
+    "MnemonicGlobal": "Camera-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "131"
+  },
+  {
+    "MnemonicFriendlyName": "Camera-AUD-SRC-1",
+    "MnemonicGlobal": "Camera-AUD-SRC-1",
+    "QuartzSrc": "159",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Camera-USB-SRCDST-1",
+    "MnemonicGlobal": "Camera-USB-SRCDST-1",
+    "QuartzSrc": "164",
+    "QuartzDst": "136"
+  },
+  {
+    "MnemonicFriendlyName": "Camera-USBH-SRCDST-1",
+    "MnemonicGlobal": "Camera-USBH-SRCDST-1",
+    "QuartzSrc": "165",
+    "QuartzDst": "137"
+  },
+  {
+    "MnemonicFriendlyName": "Camera-DATA-SRCDST-1",
+    "MnemonicGlobal": "Camera-DATA-SRCDST-1",
+    "QuartzSrc": "162",
+    "QuartzDst": "134"
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-VID-DST-1",
+    "MnemonicGlobal": "DSP_Audio-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "108"
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-VID-DST-2",
+    "MnemonicGlobal": "DSP_Audio-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "112"
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-VID-SRC-1",
+    "MnemonicGlobal": "DSP_Audio-VID-SRC-1",
+    "QuartzSrc": "198",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-AUD-DST-1",
+    "MnemonicGlobal": "DSP_Audio-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "101"
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-AUD-SRC-1",
+    "MnemonicGlobal": "DSP_Audio-AUD-SRC-1",
+    "QuartzSrc": "191",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-USB-SRCDST-1",
+    "MnemonicGlobal": "DSP_Audio-USB-SRCDST-1",
+    "QuartzSrc": "196",
+    "QuartzDst": "106"
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-USBH-SRCDST-1",
+    "MnemonicGlobal": "DSP_Audio-USBH-SRCDST-1",
+    "QuartzSrc": "197",
+    "QuartzDst": "107"
+  },
+  {
+    "MnemonicFriendlyName": "DSP_Audio-DATA-SRCDST-1",
+    "MnemonicGlobal": "DSP_Audio-DATA-SRCDST-1",
+    "QuartzSrc": "194",
+    "QuartzDst": "104"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-SRC-1",
+    "MnemonicGlobal": "Codec-AF7-VID-SRC-1",
+    "QuartzSrc": "175",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-SRC-2",
+    "MnemonicGlobal": "Codec-AF7-VID-SRC-2",
+    "QuartzSrc": "179",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-SRC-3",
+    "MnemonicGlobal": "Codec-AF7-VID-SRC-3",
+    "QuartzSrc": "183",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-SRC-4",
+    "MnemonicGlobal": "Codec-AF7-VID-SRC-4",
+    "QuartzSrc": "187",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-DST-1",
+    "MnemonicGlobal": "Codec-AF7-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "154"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-DST-2",
+    "MnemonicGlobal": "Codec-AF7-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "158"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-DST-3",
+    "MnemonicGlobal": "Codec-AF7-VID-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "162"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-VID-DST-4",
+    "MnemonicGlobal": "Codec-AF7-VID-DST-4",
+    "QuartzSrc": "",
+    "QuartzDst": "163"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-AUD-SRC-1",
+    "MnemonicGlobal": "Codec-AF7-AUD-SRC-1",
+    "QuartzSrc": "170",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-AUD-DST-1",
+    "MnemonicGlobal": "Codec-AF7-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "143"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-AUD-DST-2",
+    "MnemonicGlobal": "Codec-AF7-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "146"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-AUD-DST-3",
+    "MnemonicGlobal": "Codec-AF7-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "149"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-USBH-SRCDST-1",
+    "MnemonicGlobal": "Codec-AF7-USBH-SRCDST-1",
+    "QuartzSrc": "173",
+    "QuartzDst": "152"
+  },
+  {
+    "MnemonicFriendlyName": "Codec-AF7-USBH-SRCDST-2",
+    "MnemonicGlobal": "Codec-AF7-USBH-SRCDST-2",
+    "QuartzSrc": "174",
+    "QuartzDst": "153"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-VID-SRC-1",
+    "MnemonicGlobal": "DVS_Adjacent_System-VID-SRC-1",
+    "QuartzSrc": "207",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-VID-SRC-2",
+    "MnemonicGlobal": "DVS_Adjacent_System-VID-SRC-2",
+    "QuartzSrc": "211",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-VID-SRC-3",
+    "MnemonicGlobal": "DVS_Adjacent_System-VID-SRC-3",
+    "QuartzSrc": "215",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-VID-DST-1",
+    "MnemonicGlobal": "DVS_Adjacent_System-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "175"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-VID-DST-2",
+    "MnemonicGlobal": "DVS_Adjacent_System-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "179"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-AUD-SRC-1",
+    "MnemonicGlobal": "DVS_Adjacent_System-AUD-SRC-1",
+    "QuartzSrc": "202",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-AUD-DST-1",
+    "MnemonicGlobal": "DVS_Adjacent_System-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "164"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-AUD-DST-2",
+    "MnemonicGlobal": "DVS_Adjacent_System-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "167"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-AUD-DST-3",
+    "MnemonicGlobal": "DVS_Adjacent_System-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "170"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-USBH-SRCDST-1",
+    "MnemonicGlobal": "DVS_Adjacent_System-USBH-SRCDST-1",
+    "QuartzSrc": "205",
+    "QuartzDst": "173"
+  },
+  {
+    "MnemonicFriendlyName": "DVS_Adjacent_System-USBH-SRCDST-2",
+    "MnemonicGlobal": "DVS_Adjacent_System-USBH-SRCDST-2",
+    "QuartzSrc": "206",
+    "QuartzDst": "174"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-SRC-1",
+    "MnemonicGlobal": "JWIC_Codec-VID-SRC-1",
+    "QuartzSrc": "221",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-SRC-2",
+    "MnemonicGlobal": "JWIC_Codec-VID-SRC-2",
+    "QuartzSrc": "225",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-SRC-3",
+    "MnemonicGlobal": "JWIC_Codec-VID-SRC-3",
+    "QuartzSrc": "229",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-SRC-4",
+    "MnemonicGlobal": "JWIC_Codec-VID-SRC-4",
+    "QuartzSrc": "233",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-DST-1",
+    "MnemonicGlobal": "JWIC_Codec-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "194"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-DST-2",
+    "MnemonicGlobal": "JWIC_Codec-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "198"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-DST-3",
+    "MnemonicGlobal": "JWIC_Codec-VID-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "202"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-VID-DST-4",
+    "MnemonicGlobal": "JWIC_Codec-VID-DST-4",
+    "QuartzSrc": "",
+    "QuartzDst": "203"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-AUD-SRC-1",
+    "MnemonicGlobal": "JWIC_Codec-AUD-SRC-1",
+    "QuartzSrc": "216",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-AUD-DST-1",
+    "MnemonicGlobal": "JWIC_Codec-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "183"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-AUD-DST-2",
+    "MnemonicGlobal": "JWIC_Codec-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "186"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-AUD-DST-3",
+    "MnemonicGlobal": "JWIC_Codec-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "189"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-USBH-SRCDST-1",
+    "MnemonicGlobal": "JWIC_Codec-USBH-SRCDST-1",
+    "QuartzSrc": "219",
+    "QuartzDst": "192"
+  },
+  {
+    "MnemonicFriendlyName": "JWIC_Codec-USBH-SRCDST-2",
+    "MnemonicGlobal": "JWIC_Codec-USBH-SRCDST-2",
+    "QuartzSrc": "220",
+    "QuartzDst": "193"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-VID-SRC-1",
+    "MnemonicGlobal": "Left_Display-VID-SRC-1",
+    "QuartzSrc": "242",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-VID-SRC-2",
+    "MnemonicGlobal": "Left_Display-VID-SRC-2",
+    "QuartzSrc": "246",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-VID-SRC-3",
+    "MnemonicGlobal": "Left_Display-VID-SRC-3",
+    "QuartzSrc": "250",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-VID-DST-1",
+    "MnemonicGlobal": "Left_Display-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "215"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-VID-DST-2",
+    "MnemonicGlobal": "Left_Display-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "219"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-AUD-SRC-1",
+    "MnemonicGlobal": "Left_Display-AUD-SRC-1",
+    "QuartzSrc": "237",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-AUD-DST-1",
+    "MnemonicGlobal": "Left_Display-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "204"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-AUD-DST-2",
+    "MnemonicGlobal": "Left_Display-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "207"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-AUD-DST-3",
+    "MnemonicGlobal": "Left_Display-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "210"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-USBH-SRCDST-1",
+    "MnemonicGlobal": "Left_Display-USBH-SRCDST-1",
+    "QuartzSrc": "240",
+    "QuartzDst": "213"
+  },
+  {
+    "MnemonicFriendlyName": "Left_Display-USBH-SRCDST-2",
+    "MnemonicGlobal": "Left_Display-USBH-SRCDST-2",
+    "QuartzSrc": "241",
+    "QuartzDst": "214"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-VID-SRC-1",
+    "MnemonicGlobal": "OP_Desk-VID-SRC-1",
+    "QuartzSrc": "257",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-VID-SRC-2",
+    "MnemonicGlobal": "OP_Desk-VID-SRC-2",
+    "QuartzSrc": "261",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-VID-SRC-3",
+    "MnemonicGlobal": "OP_Desk-VID-SRC-3",
+    "QuartzSrc": "265",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-VID-1",
+    "MnemonicGlobal": "OP_Desk-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "235"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-VID-2",
+    "MnemonicGlobal": "OP_Desk-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "239"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-AUD-SRC-1",
+    "MnemonicGlobal": "OP_Desk-AUD-SRC-1",
+    "QuartzSrc": "251",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-AUD-DST-1",
+    "MnemonicGlobal": "OP_Desk-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "223"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-AUD-DST-2",
+    "MnemonicGlobal": "OP_Desk-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "226"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-AUD-DST-3",
+    "MnemonicGlobal": "OP_Desk-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "229"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-USB-SRCDST-1",
+    "MnemonicGlobal": "OP_Desk-USB-SRCDST-1",
+    "QuartzSrc": "254",
+    "QuartzDst": "232"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-USBH-SRCDST-1",
+    "MnemonicGlobal": "OP_Desk-USBH-SRCDST-1",
+    "QuartzSrc": "255",
+    "QuartzDst": "233"
+  },
+  {
+    "MnemonicFriendlyName": "OP_Desk-USBH-SRCDST-2",
+    "MnemonicGlobal": "OP_Desk-USBH-SRCDST-2",
+    "QuartzSrc": "256",
+    "QuartzDst": "234"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-VID-SRC-1",
+    "MnemonicGlobal": "Right_Display-VID-SRC-1",
+    "QuartzSrc": "271",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-VID-SRC-2",
+    "MnemonicGlobal": "Right_Display-VID-SRC-2",
+    "QuartzSrc": "275",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-VID-SRC-3",
+    "MnemonicGlobal": "Right_Display-VID-SRC-3",
+    "QuartzSrc": "279",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-VID-DST-1",
+    "MnemonicGlobal": "Right_Display-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "254"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-VID-DST-2",
+    "MnemonicGlobal": "Right_Display-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "258"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-AUD-SRC-1",
+    "MnemonicGlobal": "Right_Display-AUD-SRC-1",
+    "QuartzSrc": "266",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-AUD-DST-1",
+    "MnemonicGlobal": "Right_Display-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "243"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-AUD-DST-2",
+    "MnemonicGlobal": "Right_Display-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "246"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-AUD-DST-3",
+    "MnemonicGlobal": "Right_Display-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "249"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-USBH-SRCDST-1",
+    "MnemonicGlobal": "Right_Display-USBH-SRCDST-1",
+    "QuartzSrc": "269",
+    "QuartzDst": "252"
+  },
+  {
+    "MnemonicFriendlyName": "Right_Display-USBH-SRCDST-2",
+    "MnemonicGlobal": "Right_Display-USBH-SRCDST-2",
+    "QuartzSrc": "270",
+    "QuartzDst": "253"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-SRC-1",
+    "MnemonicGlobal": "SIPR_Codec-VID-SRC-1",
+    "QuartzSrc": "285",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-SRC-2",
+    "MnemonicGlobal": "SIPR_Codec-VID-SRC-2",
+    "QuartzSrc": "289",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-SRC-3",
+    "MnemonicGlobal": "SIPR_Codec-VID-SRC-3",
+    "QuartzSrc": "293",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-SRC-4",
+    "MnemonicGlobal": "SIPR_Codec-VID-SRC-4",
+    "QuartzSrc": "297",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-DST-1",
+    "MnemonicGlobal": "SIPR_Codec-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "273"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-DST-2",
+    "MnemonicGlobal": "SIPR_Codec-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "277"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-DST-3",
+    "MnemonicGlobal": "SIPR_Codec-VID-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "281"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-VID-DST-4",
+    "MnemonicGlobal": "SIPR_Codec-VID-DST-4",
+    "QuartzSrc": "",
+    "QuartzDst": "282"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-AUD-SRC-1",
+    "MnemonicGlobal": "SIPR_Codec-AUD-SRC-1",
+    "QuartzSrc": "280",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-AUD-DST-1",
+    "MnemonicGlobal": "SIPR_Codec-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "262"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-AUD-DST-2",
+    "MnemonicGlobal": "SIPR_Codec-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "265"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-AUD-DST-3",
+    "MnemonicGlobal": "SIPR_Codec-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "268"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-USBH-SRCDST-1",
+    "MnemonicGlobal": "SIPR_Codec-USBH-SRCDST-1",
+    "QuartzSrc": "283",
+    "QuartzDst": "271"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_Codec-USBH-SRCDST-2",
+    "MnemonicGlobal": "SIPR_Codec-USBH-SRCDST-2",
+    "QuartzSrc": "284",
+    "QuartzDst": "272"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC_Vid",
+    "MnemonicGlobal": "SIPR_PC-VID-SRC-1",
+    "QuartzSrc": "100",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-VID-SRC-2",
+    "MnemonicGlobal": "SIPR_PC-VID-SRC-2",
+    "QuartzSrc": "104",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-VID-SRC-3",
+    "MnemonicGlobal": "SIPR_PC-VID-SRC-3",
+    "QuartzSrc": "108",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-VID-DST-1",
+    "MnemonicGlobal": "SIPR_PC-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "294"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-VID-DST-2",
+    "MnemonicGlobal": "SIPR_PC-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "298"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC_Aud",
+    "MnemonicGlobal": "SIPR_PC-AUD-SRC-1",
+    "QuartzSrc": "95",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-AUD-DST-1",
+    "MnemonicGlobal": "SIPR_PC-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "283"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-AUD-DST-2",
+    "MnemonicGlobal": "SIPR_PC-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "286"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-AUD-DST-3",
+    "MnemonicGlobal": "SIPR_PC-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "289"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC_USB",
+    "MnemonicGlobal": "SIPR_PC-USBH-SRCDST-1",
+    "QuartzSrc": "98",
+    "QuartzDst": "292"
+  },
+  {
+    "MnemonicFriendlyName": "SIPR_PC-USBH-SRCDST-2",
+    "MnemonicGlobal": "SIPR_PC-USBH-SRCDST-2",
+    "QuartzSrc": "99",
+    "QuartzDst": "293"
+  },
+  {
+    "MnemonicFriendlyName": "TTC_PC_Video-1",
+    "MnemonicGlobal": "TS_PC-VID-SRC-1",
+    "QuartzSrc": "150",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-VID-SRC-2",
+    "MnemonicGlobal": "TS_PC-VID-SRC-2",
+    "QuartzSrc": "154",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-VID-SRC-3",
+    "MnemonicGlobal": "TS_PC-VID-SRC-3",
+    "QuartzSrc": "158",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-VID-DST-1",
+    "MnemonicGlobal": "TS_PC-VID-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "676"
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-VID-DST-2",
+    "MnemonicGlobal": "TS_PC-VID-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "680"
+  },
+  {
+    "MnemonicFriendlyName": "TTC_PC_Audio",
+    "MnemonicGlobal": "TS_PC-AUD-SRC-1",
+    "QuartzSrc": "145",
+    "QuartzDst": ""
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-AUD-DST-1",
+    "MnemonicGlobal": "TS_PC-AUD-DST-1",
+    "QuartzSrc": "",
+    "QuartzDst": "665"
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-AUD-DST-2",
+    "MnemonicGlobal": "TS_PC-AUD-DST-2",
+    "QuartzSrc": "",
+    "QuartzDst": "668"
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-AUD-DST-3",
+    "MnemonicGlobal": "TS_PC-AUD-DST-3",
+    "QuartzSrc": "",
+    "QuartzDst": "671"
+  },
+  {
+    "MnemonicFriendlyName": "TTC_PC_USB",
+    "MnemonicGlobal": "TS_PC-USBH-SRCDST-1",
+    "QuartzSrc": "148",
+    "QuartzDst": "674"
+  },
+  {
+    "MnemonicFriendlyName": "TS_PC-USBH-SRCDST-2",
+    "MnemonicGlobal": "TS_PC-USBH-SRCDST-2",
+    "QuartzSrc": "149",
+    "QuartzDst": "675"
+  }
+]

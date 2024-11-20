@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EvertzQuartzMagnumApp.styles.css" asp-append-version="true" />
     @inject IHttpContextAccessor HttpContextAccessor
-
 </head>
-<body>
+<body class="@((HttpContextAccessor.HttpContext?.Session.GetString("DarkMode") == "true") ? "dark-mode" : "")">
+
+    @* Debugging the Session Value *@
+    <p>DarkMode Session Value: @(HttpContextAccessor.HttpContext?.Session.GetString("DarkMode") ?? "null")</p>
+
     <header class="app-header">
         <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow">
             <div class="container-fluid">
@@ -30,12 +33,21 @@
                             </li>
                         </ul>
                     }
-                    <button id="dark-mode-toggle" class="btn btn-sm btn-outline-secondary">Dark Mode</button>
+                    <!-- Add the Light/Dark Mode Toggle -->
+                    <div id="toggle-wrapper">
+                        <input type="checkbox" id="toggle_checkbox">
+                        <label for="toggle_checkbox">
+                            <span id="star">
+                                <span class="star" id="star-1">★</span>
+                                <span class="star" id="star-2">★</span>
+                            </span>
+                            <span id="moon"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-
     <div class="container main-content">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -47,9 +59,12 @@
             &copy; 2024 - EvertzQuartzMagnumApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/switching.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

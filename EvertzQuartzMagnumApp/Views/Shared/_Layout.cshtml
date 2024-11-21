@@ -6,13 +6,9 @@
     <title>@ViewData["Title"] - EvertzQuartzMagnumApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/EvertzQuartzMagnumApp.styles.css" asp-append-version="true" />
     @inject IHttpContextAccessor HttpContextAccessor
 </head>
 <body class="@((HttpContextAccessor.HttpContext?.Session.GetString("DarkMode") == "true") ? "dark-mode" : "")">
-
-    @* Debugging the Session Value *@
-    <p>DarkMode Session Value: @(HttpContextAccessor.HttpContext?.Session.GetString("DarkMode") ?? "null")</p>
 
     <header class="app-header">
         <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow">
@@ -33,15 +29,16 @@
                             </li>
                         </ul>
                     }
-                    <!-- Add the Light/Dark Mode Toggle -->
+                    <!-- Light/Dark Mode Toggle -->
                     <div id="toggle-wrapper">
-                        <input type="checkbox" id="toggle_checkbox">
+                        <input type="checkbox" id="toggle_checkbox"
+                        @(HttpContextAccessor.HttpContext?.Session.GetString("DarkMode") == "true" ? "checked" : "") />
                         <label for="toggle_checkbox">
-                            <span id="star">
-                                <span class="star" id="star-1">★</span>
-                                <span class="star" id="star-2">★</span>
-                            </span>
-                            <span id="moon"></span>
+                            <div id="star">
+                                <div class="star" id="star-1">★</div>
+                                <div class="star" id="star-2">★</div>
+                            </div>
+                            <div id="moon"></div>
                         </label>
                     </div>
                 </div>

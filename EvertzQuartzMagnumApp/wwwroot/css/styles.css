@@ -14,6 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    background-color: #fff; /* Default background for light mode */
 }
 
 .container-fluid {
@@ -107,183 +109,89 @@ body {
         transform: scale(0.98);
     }
 
-/* Error Message Styling */
-.error-message {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: -0.5rem;
-}
-
 /* Dark Mode Styling */
 body.dark-mode {
     background-color: #1e1e2f;
     color: #f0f0f0; /* Adjusted for readability */
 }
 
-    body.dark-mode .btn {
-        background-color: #1e88e5;
-        color: #ffffff;
-        border: 1px solid #1976d2;
-    }
-
-        body.dark-mode .btn:hover {
-            background-color: #1565c0;
-        }
-
-        body.dark-mode .btn:active {
-            background-color: #0d47a1;
-        }
-
-    body.dark-mode .login-container {
-        background-color: #2b2b3d;
-        color: #ffffff;
-        border: 1px solid #3a3a4f;
-    }
-
-    body.dark-mode .form-group input {
-        background-color: #3a3a4f;
-        color: #ffffff;
-        border: 1px solid #555555;
-    }
-
-        body.dark-mode .form-group input::placeholder {
-            color: #aaaaaa;
-        }
-
 /* Light/Dark Toggle Styling */
-#toggle-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 60px;
+#star {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 30px;
     height: 30px;
+    background-color: #fafd0f;
+    transform: scale(1);
+    border-radius: 50%;
+    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+    z-index: 1;
 }
 
-    #toggle-wrapper input {
-        display: none;
-    }
+#star-1 {
+    position: relative;
+}
 
-    #toggle-wrapper label {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        background-color: #77b5fe;
-        border-radius: 30px;
-        cursor: pointer;
-        position: relative;
+#star-2 {
+    position: absolute;
+    transform: rotateZ(36deg);
+}
+
+.star {
+    top: 0;
+    left: -7px;
+    font-size: 54px;
+    line-height: 28px;
+    color: #fafd0f;
+    transition: 0.3s ease color;
+}
+
+#moon {
+    position: absolute;
+    bottom: -52px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s ease bottom;
+}
+
+    #moon:before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        left: -17px;
+        width: 40px;
+        height: 40px;
+        background-color: #03a9f4;
+        border-radius: 50%;
         transition: 0.3s ease background-color;
     }
 
-        #toggle-wrapper label .sun {
-            position: absolute;
-            left: 5px;
-            width: 20px;
-            height: 20px;
-            background-color: yellow;
-            border-radius: 50%;
-            display: block;
-        }
-
-        #toggle-wrapper label .moon {
-            position: absolute;
-            right: 5px;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border-radius: 50%;
-            display: none;
-        }
-
-#toggle-checkbox:checked + label {
+#toggle_checkbox:checked + label {
     background-color: #000;
 }
 
-    #toggle-checkbox:checked + label .sun {
-        display: none;
+    #toggle_checkbox:checked + label #star {
+        top: 3px;
+        left: 64px;
+        transform: scale(0.3);
+        background-color: yellow;
     }
 
-    #toggle-checkbox:checked + label .moon {
-        display: block;
+    #toggle_checkbox:checked + label .star {
+        color: yellow;
     }
 
-/* Table Styling */
-.table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-    .table th, .table td {
-        border: 1px solid #ddd;
-        text-align: left;
-        padding: 8px;
+    #toggle_checkbox:checked + label #moon {
+        bottom: 8px;
     }
 
-    .table th {
-        background-color: #f4f4f4;
-        position: sticky; /* Fix the header */
-        top: 0;
-        z-index: 2;
-    }
-
-/* Ensure dark mode table text visibility */
-body.dark-mode .table th,
-body.dark-mode .table td {
-    color: #f0f0f0;
-}
-
-body.dark-mode .table th {
-    background-color: #2a2a3a;
-}
-
-/* Scrollable Table */
-.table-responsive {
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
-}
-
-/* Dropdown caret styling */
-.dropdown-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-    .dropdown-container select {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        padding-right: 2rem; /* Space for the caret */
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-body.dark-mode .dropdown-container select {
-    background-color: #2b2b3d;
-    color: #f0f0f0;
-}
-
-.dropdown-container .caret {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    font-size: 0.8rem;
-    color: #555;
-}
-
-body.dark-mode .dropdown-container .caret {
-    color: #ddd; /* Adjust caret color for dark mode */
-}
-
-/* Adjust table alignment for button */
-.table td .btn-take {
-    white-space: nowrap;
-    width: 50px; /* Narrower button */
-    padding: 0.5rem; /* Adjust padding for smaller height */
-    text-align: center;
-}
+        #toggle_checkbox:checked + label #moon:before {
+            background-color: #000;
+        }
 
 /* Footer Styling */
 footer {

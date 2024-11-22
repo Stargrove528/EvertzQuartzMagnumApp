@@ -29,17 +29,11 @@
                             </li>
                         </ul>
                     }
-                    <!-- Light/Dark Mode Toggle -->
+                    <!-- Simple Light/Dark Mode Toggle -->
                     <div id="toggle-wrapper">
                         <input type="checkbox" id="toggle_checkbox"
                         @(HttpContextAccessor.HttpContext?.Session.GetString("DarkMode") == "true" ? "checked" : "") />
-                        <label for="toggle_checkbox">
-                            <div id="star">
-                                <div class="star" id="star-1">★</div>
-                                <div class="star" id="star-2">★</div>
-                            </div>
-                            <div id="moon"></div>
-                        </label>
+                        <label for="toggle_checkbox"></label>
                     </div>
                 </div>
             </div>

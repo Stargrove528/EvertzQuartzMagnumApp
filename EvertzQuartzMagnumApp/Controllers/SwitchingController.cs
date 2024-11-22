@@ -39,16 +39,30 @@ namespace EvertzQuartzMagnumApp.Controllers
                 _logger.LogInformation("Configuration file successfully read.");
 
                 var configData = JsonSerializer.Deserialize<List<JsonElement>>(jsonData);
-
-                if (configData == null || configData.Count == 0)
+                if (configData == null || !configData.Any())
                 {
                     ViewBag.ErrorMessage = "The configuration file is empty or invalid.";
                     _logger.LogWarning("The configuration file at {JsonFilePath} is empty or invalid.", _jsonFilePath);
                     return View();
                 }
 
-                _logger.LogInformation("Successfully loaded {Count} entries from the configuration file.", configData.Count);
-                ViewBag.ConfigData = configData;
+                // Filter destinations (e.g., only those with "DST" in specific columns)
+                var destinations = configData.Where(entry =>
+                    entry.TryGetProperty("MnemonicFriendlyName", out var name) &&
+                    name.GetString()?.Contains("DST-") == true
+                ).ToList();
+
+                // Filter sources (e.g., only those with "SRC" in specific columns)
+                var sources = configData.Where(entry =>
+                    entry.TryGetProperty("MnemonicFriendlyName", out var name) &&
+                    name.GetString()?.Contains("SRC-") == true
+                ).ToList();
+
+                // Pass both filtered destinations and sources to the view
+                ViewBag.Destinations = destinations;
+                ViewBag.Sources = sources;
+
+                _logger.LogInformation("Filtered destinations: {CountDst}, sources: {CountSrc}.", destinations.Count, sources.Count);
                 return View();
             }
             catch (JsonException ex)
@@ -64,6 +78,7 @@ namespace EvertzQuartzMagnumApp.Controllers
                 return View();
             }
         }
+
 
         // POST: Switching/Take
         [HttpPost]

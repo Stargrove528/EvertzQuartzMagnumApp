@@ -2,7 +2,8 @@
     ViewData["Title"] = "Switching Interface";
 
     // Ensure ConfigData is parsed correctly and is not null
-    var configData = ViewBag.ConfigData as IEnumerable<System.Text.Json.JsonElement>;
+    var filteredDestinations = ViewBag.Destinations as IEnumerable<System.Text.Json.JsonElement>;
+    var filteredSources = ViewBag.Sources as IEnumerable<System.Text.Json.JsonElement>;
 }
 
 <div class="container">
@@ -12,7 +13,7 @@
     {
         <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
     }
-    else if (configData == null || !configData.Any())
+    else if (filteredDestinations == null || !filteredDestinations.Any())
     {
         <div class="alert alert-warning">No configuration data available. Please upload a valid configuration file.</div>
     }
@@ -28,40 +29,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var entry in configData)
+                    @foreach (var destination in filteredDestinations)
                     {
-                        if (entry.ValueKind == System.Text.Json.JsonValueKind.Object &&
-                        entry.TryGetProperty("MnemonicFriendlyName", out var mnemonicFriendlyName) &&
-                        mnemonicFriendlyName.ValueKind == System.Text.Json.JsonValueKind.String &&
-                        entry.TryGetProperty("QuartzDst", out var quartzDst) &&
+                        if (destination.ValueKind == System.Text.Json.JsonValueKind.Object &&
+                        destination.TryGetProperty("MnemonicFriendlyName", out var dstName) &&
+                        dstName.ValueKind == System.Text.Json.JsonValueKind.String &&
+                        destination.TryGetProperty("QuartzDst", out var quartzDst) &&
                         quartzDst.ValueKind == System.Text.Json.JsonValueKind.String)
                         {
                             string currentSrc = "None";
-                            if (entry.TryGetProperty("QuartzSrc", out var quartzSrc) &&
-                            quartzSrc.ValueKind == System.Text.Json.JsonValueKind.String &&
-                            !(mnemonicFriendlyName.GetString()?.Contains("USB") ?? false) &&
-                            !(mnemonicFriendlyName.GetString()?.Contains("USBH") ?? false) &&
-                            !(mnemonicFriendlyName.GetString()?.Contains("DATA") ?? false))
+                            if (destination.TryGetProperty("QuartzSrc", out var quartzSrc) &&
+                            quartzSrc.ValueKind == System.Text.Json.JsonValueKind.String)
                             {
                                 currentSrc = quartzSrc.GetString() ?? "None";
                             }
 
                             <tr>
-                                <td>@mnemonicFriendlyName.GetString()</td>
+                                <td>@dstName.GetString() ?? "Unknown"</td>
                                 <td>@currentSrc</td>
                                 <td class="d-flex align-items-center">
                                     <div class="dropdown-container">
                                         <select class="form-control source-select dropdown" data-destination="@quartzDst.GetString()">
-                                            @foreach (var src in configData)
+                                            @foreach (var source in filteredSources ?? Enumerable.Empty<System.Text.Json.JsonElement>())
                                             {
-                                                if (src.ValueKind == System.Text.Json.JsonValueKind.Object &&
-                                                src.TryGetProperty("MnemonicFriendlyName", out var srcName) &&
+                                                if (source.ValueKind == System.Text.Json.JsonValueKind.Object &&
+                                                source.TryGetProperty("MnemonicFriendlyName", out var srcName) &&
                                                 srcName.ValueKind == System.Text.Json.JsonValueKind.String &&
-                                                src.TryGetProperty("QuartzSrc", out var srcValue) &&
+                                                source.TryGetProperty("QuartzSrc", out var srcValue) &&
                                                 srcValue.ValueKind == System.Text.Json.JsonValueKind.String)
                                                 {
                                                     var srcMnemonic = srcName.GetString();
-                                                    var dstMnemonic = mnemonicFriendlyName.GetString();
+                                                    var dstMnemonic = dstName.GetString();
 
                                                     if ((dstMnemonic?.Contains("VID-") == true && srcMnemonic?.Contains("VID-") == true) ||
                                                     (dstMnemonic?.Contains("AUD-") == true && srcMnemonic?.Contains("AUD-") == true) ||
@@ -69,7 +67,7 @@
                                                     (dstMnemonic?.Contains("USB-") == true && srcMnemonic?.Contains("USB-") == true) ||
                                                     (dstMnemonic?.Contains("USBH-") == true && srcMnemonic?.Contains("USBH-") == true))
                                                     {
-                                                        <option value="@srcValue.GetString()">@srcMnemonic</option>
+                                                        <option value="@srcValue.GetString()">@srcMnemonic ?? "Unknown"</option>
                                                     }
                                                 }
                                             }
